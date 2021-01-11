@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'transaction'
 
 class Account
@@ -12,16 +14,29 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    transaction = @transaction.new(amount, 0, @balance)
-    @transactions << transaction
+    deposit = create_deposit(amount)
+    push_transaction(deposit)
   end
 
   def withdraw(amount)
     raise 'Cannot withdraw a negative amount' unless amount.positive?
 
     @balance -= amount
-    transaction = @transaction.new(0, amount, @balance)
-    @transactions << transaction
+    withdraw = create_withdrawal(amount)
+    push_transaction(withdraw)
   end
 
+  private
+
+  def create_deposit(amount)
+    @transaction.new(amount, 0, @balance)
+  end
+
+  def create_withdrawal(amount)
+    @transaction.new(0, amount, @balance)
+  end
+
+  def push_transaction(transaction)
+    @transactions << transaction
+  end
 end

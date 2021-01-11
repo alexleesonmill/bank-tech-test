@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe Account do
   let(:account) { Account.new(statement, transaction_class) }
   let(:transaction_class) { double(:transaction_class, new: transaction) }
