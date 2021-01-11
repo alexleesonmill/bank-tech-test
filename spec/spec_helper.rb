@@ -13,9 +13,9 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require 'account'
-require 'statement'
-require 'transaction'
+require_relative '../lib/account'
+require_relative '../lib/statement'
+require_relative '../lib/transaction'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
