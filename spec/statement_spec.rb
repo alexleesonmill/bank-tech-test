@@ -1,0 +1,3 @@
+describe Statement do
+
+end
