@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Statement
-  def print_statement
+  def print_statement(transactions)
+    @transactions = transactions
     print_header
     print_transactions
   end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'transaction'
+require_relative './transaction'
+require_relative './statement'
 
 class Account
   attr_reader :balance, :transactions
@@ -24,6 +25,10 @@ class Account
     @balance -= amount
     withdraw = create_withdrawal(amount)
     push_transaction(withdraw)
+  end
+
+  def print_statement
+    @statement.print_statement(@transactions)
   end
 
   private
