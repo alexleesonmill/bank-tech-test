@@ -1,21 +1,32 @@
 # Bank Tech Test
 
-Today, you'll practice doing a tech test.
+[How to run](#How-to-run) | [Running Tests](#Running-Tests) | [Approach](#Approach) | [Code Structure](#Code-Structure) | [Visuals](#Visuals)  [Acceptance Criteria](#Acceptance-Criteria)
 
-For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
+### How to run
+First, clone this repository. Then:
 
-You'll get to practice your OO design and TDD skills.
+```bash
+> bundle install
+> irb
+> require './lib/account.rb'
+```
 
-You'll work alone, and you'll also review your own code so you can practice reflecting on and improving your own work.
+### Running Tests
+from root folder, run the following command
+```bash
+$ rspec 
+```
+### Approach
+I approached this tech test by first creating user stories, which were taken from a breakdown of the acceptance criteria. 
+I then started diagramming out how I expected the programme to work. 
+I visualised the methods that I felt I would require in order to meet the acceptance criteria of the program.
 
-## Specification
+### Code Structure
+Once I had visualised the methods that would be required I spent time thinking about the structure of the code and how many classes would be required.
+I thought about how the classes would interact, always trying to keep the SRP at the forefront of my mind. 
 
-### Requirements
-
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+### Visuals
+[Bank Tech Test Class Diagram](https://github.com/alexleesonmill/bank-tech-test/files/5802530/Bank.Tech.Test.Diagram.pdf)
 
 ### Acceptance criteria
 
@@ -31,8 +42,4 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
-
-## Self-assessment
-
-Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
 
