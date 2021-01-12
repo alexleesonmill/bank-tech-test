@@ -14,8 +14,8 @@ class Statement
   end
 
   def print_transactions
-    @transactions.reverse.each do |transaction|
-      print "#{transaction.date} || #{format(transaction.credit)} || #{format(transaction.debit)} || #{transaction.current_balance}\n"
+    @transactions.reverse.each do |t|
+      print "#{t.date} || #{format(t.credit)} || #{format(t.debit)} || #{t.current_balance}\n"
     end
   end
 

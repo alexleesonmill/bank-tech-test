@@ -21,6 +21,7 @@ class Account
 
   def withdraw(amount)
     raise 'Cannot withdraw a negative amount' unless amount.positive?
+    raise 'Insufficient balance available' if @balance < amount
 
     @balance -= amount
     withdraw = create_withdrawal(amount)
