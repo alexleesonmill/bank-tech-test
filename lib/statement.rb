@@ -10,10 +10,16 @@ class Statement
   private
 
   def print_header
-    print 'date || credit || debit || balance\n'
+    print "date || credit || debit || balance\n"
   end
 
   def print_transactions
-    print '14/01/2012 || || 500.00 || 2500.00\n'
+    @transactions.reverse.each do |transaction|
+      print "#{transaction.date} || #{format(transaction.credit)} || #{format(transaction.debit)} || #{transaction.current_balance}\n"
+    end
+  end
+
+  def format(amount)
+    '%.2f' % amount
   end
 end

@@ -15,6 +15,14 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+                                                                 SimpleCov::Formatter::Console
+                                                               ])
+
+SimpleCov.start
 require_relative '../lib/account'
 require_relative '../lib/statement'
 require_relative '../lib/transaction'
