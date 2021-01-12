@@ -14,7 +14,7 @@ describe Statement do
     it 'displays a printed statement fully' do
       expect do
         statement.print_statement(transactions)
-      end.to output("date || credit || debit || balance\n12/01/2021 || 0.00 || 20.00 || 30\n12/01/2021 || 50.00 || 0.00 || 50\n").to_stdout
+      end.to output("date || credit || debit || balance\n12/01/2021 || 0.00 || 20.00 || 30.00\n12/01/2021 || 50.00 || 0.00 || 50.00\n").to_stdout
     end
   end
 end

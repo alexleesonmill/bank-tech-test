@@ -15,16 +15,16 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    deposit = create_deposit(amount)
+    deposit = create_deposit_transaction(amount)
     push_transaction(deposit)
   end
 
   def withdraw(amount)
     raise 'Cannot withdraw a negative amount' unless amount.positive?
-    raise 'Insufficient balance available' if @balance < amount
+    raise 'Insufficient balance available' unless @balance >= amount
 
     @balance -= amount
-    withdraw = create_withdrawal(amount)
+    withdraw = create_withdrawal_transaction(amount)
     push_transaction(withdraw)
   end
 
@@ -34,11 +34,11 @@ class Account
 
   private
 
-  def create_deposit(amount)
+  def create_deposit_transaction(amount)
     @transaction.new(amount, 0, @balance)
   end
 
-  def create_withdrawal(amount)
+  def create_withdrawal_transaction(amount)
     @transaction.new(0, amount, @balance)
   end
 

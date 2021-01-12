@@ -29,6 +29,25 @@ I thought about how the classes would interact, always trying to keep the SRP at
 [Bank Tech Test Class Diagram](https://github.com/alexleesonmill/bank-tech-test/files/5802530/Bank.Tech.Test.Diagram.pdf)
 <img width="1075" alt="Screenshot 2021-01-12 at 14 02 46" src="https://user-images.githubusercontent.com/59441094/104324193-05ff7500-54df-11eb-9a59-67fa4091e838.png">
 
+### User Stories
+```
+As a customer,
+So that I can save money,
+I want to be able to deposit money into my account
+```
+
+```
+As a customer,
+So that I can spend the money I saved,
+I want to be able to withdraw money from my account
+```
+
+```
+As a customer,
+So that I can see what I've spent
+I want to be able to print a statement of my account
+```
+
 ### Acceptance criteria
 
 **Given** a client makes a deposit of 1000 on 10-01-2012  
